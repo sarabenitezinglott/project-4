@@ -27,9 +27,7 @@ def import_tables():
     C13 = pd.read_csv("data/MYDATA/C13.csv",sep=";")
     C14 = pd.read_csv("data/MYDATA/C14.csv",sep=";")
     C15 = pd.read_csv("data/MYDATA/C15.csv",sep=";")
-    C16 = pd.read_csv("data/MYDATA/C16.csv",sep=";")
-
-    return A1,A2,A3,A4,A5,A6,A7,A8,A9,A10,C1,C2,C3,C4,C5,C6,C7,C8,C9,C10,C11,C12,C13,C14,C15,C16
+    return A1,A2,A3,A4,A5,A6,A7,A8,A9,A10,C1,C2,C3,C4,C5,C6,C7,C8,C9,C10,C11,C12,C13,C14,C15
 
 def drop_first_column(df):
     df.drop(df.columns[0], inplace = True, axis=1)
@@ -48,4 +46,13 @@ def matching_condition(df, df_name):
 
 
 def concat_df(dataframes):
-    pd.concat(dataframes,axis = 0)
+    concatenated_df = pd.concat(dataframes, axis=0, ignore_index=True)
+    return concatenated_df
+
+#The info from the database, there are some unknown leads positions, so they need to be removed from the database
+
+def delete_and_repacements_leads(df):
+    mask = (df["sensor position"] == "X") | (df["sensor position"] == "Y") | (df["sensor position"] == "nd")
+    df.drop(df[mask].index, inplace=True)
+    df["sensor position"].replace({"AF1": "AF3", "AF2": "AF4", "PO1": "PO3", "PO2": "PO4"}, inplace=True)
+    return df

@@ -1,0 +1,9 @@
+-- CREATE DATABASE EEG;
+USE EEG;
+
+
+
+
+
+
+
