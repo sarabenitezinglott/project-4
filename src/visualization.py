@@ -5,6 +5,7 @@ from tqdm import tqdm  #Faster for loops
 from matplotlib import pyplot as plt
 
 #For a correct visualization we must transpose the data 
+#Data pre-processing
 
 def transpose(df):
     print(df.columns)

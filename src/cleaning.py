@@ -7,6 +7,11 @@ def import_tables():
     A4 = pd.read_csv("data/MYDATA/A4.csv",sep=";")
     A5 = pd.read_csv("data/MYDATA/A5.csv",sep=";")
   
+    Aa1 = pd.read_csv("data/MYDATA/Aa170.csv",sep=";")
+    Aa2 = pd.read_csv("data/MYDATA/Aa172.csv",sep=";")
+    Aa3 = pd.read_csv("data/MYDATA/Aa174.csv",sep=";")
+    Aa4 = pd.read_csv("data/MYDATA/Aa175.csv",sep=";")
+    Aa5 = pd.read_csv("data/MYDATA/Aa176.csv",sep=";")
 
     C1 = pd.read_csv("data/MYDATA/C1.csv",sep=";")
     C2 = pd.read_csv("data/MYDATA/C2.csv",sep=";")
@@ -17,8 +22,14 @@ def import_tables():
     C7 = pd.read_csv("data/MYDATA/C7.csv",sep=";")
     C8 = pd.read_csv("data/MYDATA/C8.csv",sep=";")
     C9 = pd.read_csv("data/MYDATA/C9.csv",sep=";")
+
+    Cc1 = pd.read_csv("data/MYDATA/Cc317.csv",sep=";")
+    Cc2 = pd.read_csv("data/MYDATA/Cc319.csv",sep=";")
+    Cc3 = pd.read_csv("data/MYDATA/Cc322.csv",sep=";")
+    Cc4 = pd.read_csv("data/MYDATA/Cc325.csv",sep=";")
+    Cc5 = pd.read_csv("data/MYDATA/Cc326.csv",sep=";")
    
-    return A1,A2,A3,A4,A5,C1,C2,C3,C4,C5,C6,C7,C8,C9
+    return A1,A2,A3,A4,A5,Aa1,Aa2,Aa3,Aa4,Aa5,C1,C2,C3,C4,C5,C6,C7,C8,C9,Cc1,Cc2,Cc3,Cc4,Cc5
 
 def drop_first_column(df):
     df.drop(df.columns[0], inplace = True, axis=1)
