@@ -69,7 +69,7 @@ SELECT `trial number`, COUNT(channel) AS total_channels, ((SUM(`time`*0.001)/ CO
 FROM control2
 GROUP BY `trial number`;
 
--- Which are the highest and minumun variable for each grtoup of patients?
+-- Which are the highest and minumun variable for each group of patients?
 -- Alcoholic group
 WITH Alcoholic1_group_MINfrequency AS (
     SELECT `trial number`, `sensor position`, MIN(`sensor value`) AS minimum_value

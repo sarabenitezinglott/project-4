@@ -1,6 +1,5 @@
 import numpy as np
-import pandas as pd 
-import mne
+import pandas as pd
 from tqdm import tqdm  #Faster for loops
 from matplotlib import pyplot as plt
 

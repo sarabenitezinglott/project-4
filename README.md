@@ -1,5 +1,5 @@
 <div style="text-align:center">
-  <h1> EEG dataset: Alcoholic vs Control cohorts </h1>
+  <h1> EEG dataset: A comparative study between Alcoholic and Control individuals with epilepsy predisposition </h1>
 </div>
 
 ## Introduction
@@ -32,7 +32,7 @@ Treatments: Anti-epileptic drugs (AEDs) or Temporal lobectomy, in which a part o
 
 There are different ways of extracting the electrical activity of a patient with epilepsy. For this study, a non-invasive method is used for this aim, the electroencephalogram (EEG) with 64 leads. Furthermore, the data was obtained from [UC Irvine Machine Learning Repossitory - EEG Database](https://archive.ics.uci.edu/dataset/121/eeg+database) study. This dataset contains:
 
-1. Two subjects: alcoholic and control. All subjects suffer from epilepsy. For this research, all patients where stimuled in order to provoke the seizure.
+1. Four subjects: 2 alcoholics and 2 controls. All suffer from epilepsy, and for this research, they where stimulated in order to provoke the seizure.
 
     - For stimulation, Snodgrass and Vanderwart pictures set from 1980 were used. 
 
@@ -40,22 +40,41 @@ There are different ways of extracting the electrical activity of a patient with
 
 3. EEG with 64 leads, 256 samples per patient. 
 
+## Workflow
+To study this dataset different approaches were used:
 
-## Data pre-processing
+1st Python pandas library: cleaning and exploration of the dataset.
 
+2nd MySQL: to obtain essential information of each patient, such as the number of sensors per each patient the recording time of the EEG, the maximal and imal sernsor electrical activity for each patient, and the number of samples per second. 
 
+3rd Tableau: to visualize what I have extracted from SQL.
 
-## Analisis: Comparative study
+4th Python visualization, with matplotlib.
 
 
 ## Results
 
+Number of sensors per group:
+
+![Number of sensors](/images/barplots.png)
+
+
+Alcoholic group 
+Alcoholic 1: 
+
+![Alcoholic 1](/images/alcoholic%201.png)
+
+![Alcoholic 2](/images/alcoholic%202.png)
+
+![Control 1](/images/control%201.png)
+
+![Control 1](/images/control%202.png)
 
 ## Links
 
 [Epilepsy Foundation](https://www.epilepsy.com/what-is-epilepsy/seizure-types)
 
-[Tableau publication](https://public.tableau.com/views/project-5EEGdifferencesbetweenalcoholicsandcontrolgroups_/Dashboard3?:language=en-US&publish=yes&:display_count=n&:origin=viz_share_link)
+[Tableau publication](https://public.tableau.com/views/project-5EEGdifferencesbetweenalcoholicsandcontrolgroups_1/Story1?:language=es-ES&publish=yes&:display_count=n&:origin=viz_share_link)
 
  [UC Irvine Machine Learning Repossitory - EEG Database](https://archive.ics.uci.edu/dataset/121/eeg+database)
 
