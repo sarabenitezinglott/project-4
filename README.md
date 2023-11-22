@@ -52,19 +52,24 @@ To study this dataset different approaches were used:
 4th Python visualization, with matplotlib.
 
 
-## Results
+## Tableau results
 
-Number of sensors per group:
+Although it was previously mentioned that there were initially 64 leads during the EEG recording, it's important to acknowledge that information from three leads was lost during the process. 
+As a consequence of the lost information from three leads, the total count of distinct sensors for each trial, when plotted, yields a result of 61. By confirming that every patient in the EEG recordings had the same set of leads, the study has more validation and relaibility.
 
 ![Number of sensors](/images/barplots.png)
 
+Knowing that each group had the same conditions during the medical study, then I could start the analysis part, in which a comparison between the sensor values between each group was made. 
 
-Alcoholic group 
-Alcoholic 1: 
+
+### Alcoholic group 
+Alcoholic individual 1, and subject identifier is *co2a0000364*, showed in 5 trials to have a hger 
 
 ![Alcoholic 1](/images/alcoholic%201.png)
 
 ![Alcoholic 2](/images/alcoholic%202.png)
+
+### Control group
 
 ![Control 1](/images/control%201.png)
 
